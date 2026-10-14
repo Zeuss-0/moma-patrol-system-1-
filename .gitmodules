@@ -1,0 +1,3 @@
+[submodule "battery"]
+	path = battery
+	url = https://github.com/Lucid-A/lebang_battery_driver.git
