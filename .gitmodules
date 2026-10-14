@@ -5,3 +5,6 @@
 	path = 3rd/livox_ros_driver2
 	url = https://github.com/Lucid-A/livox_ros_driver2.git
 	branch = Guangtie
+[submodule "moma_nav"]
+	path = moma_nav
+	url = https://github.com/Johnson3176/moma_nav.git
