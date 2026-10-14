@@ -1,3 +1,7 @@
 [submodule "battery"]
 	path = 3rd/battery
 	url = https://github.com/Lucid-A/lebang_battery_driver.git
+[submodule "3rd/livox_ros_driver2"]
+	path = 3rd/livox_ros_driver2
+	url = https://github.com/Lucid-A/livox_ros_driver2.git
+	branch = Guangtie
