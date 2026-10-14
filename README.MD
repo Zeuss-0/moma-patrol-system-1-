@@ -4,6 +4,8 @@ Workspace for Guangzhou Locomotive Patroling system.
 
 Accept only Packages as submodule.
 
+All used and modified 3rd-party packages, such as hardware drivers, should be placed under `3rd/`
+
 It is recommened to be used as `src/` under ROS workspace, i.e:
 ```git clone --recurse-submodules git@github.com:yangzhaofeng496/moma-patrol-system.git <your_workspace_dir>/src```
 
@@ -17,10 +19,6 @@ It is recommened to be used as `src/` under ROS workspace, i.e:
 > ```
 > git pull --recurse-submodules
 > ```
-
-All used and modified 3rd-party packages, such as hardware drivers, should be placed under `3rd/`
-
-
 
 ## Git Command Usages
 
@@ -83,6 +81,6 @@ git commit -m "chore: remove <repo> submodule"
 <details>
 <summary><b>Battery Info Publisher</b></summary>
 
-![Battery Info Publisher](3rd/battery/readme.md)
+![Battery Info Publisher](https://github.com/Lucid-A/lebang_battery_driver/blob/6e3a86be3d8b97b30107e738b974ca5d68297a82/readme.md)
 
 </details>
