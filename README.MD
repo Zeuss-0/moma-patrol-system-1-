@@ -10,6 +10,9 @@ It is recommened to be used as `src/` under ROS workspace, i.e:
 
 All used and modified 3rd-party packages, such as hardware drivers, should be placed under `3rd/`
 
+> Please follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) when writing commit messages.
+> If needed, you can use an LLM to help rewrite your commit message into the required format.
+
 ## README for Packages
 
 TODO
