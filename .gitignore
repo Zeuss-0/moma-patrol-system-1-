@@ -1,0 +1,185 @@
+# ============================================
+# ROS / Catkin / Colcon 构建产物
+# ============================================
+build/
+devel/
+install/
+logs/
+log/
+.build/
+.devel/
+.install/
+
+# Catkin 相关
+.catkin_workspace
+catkin_make_isolated/
+catkin_tools_prebuild/
+
+# Colcon 相关
+colcon_build/
+colcon_install/
+colcon_log/
+
+# rosbag / 录制文件
+*.bag
+*.bag.active
+*.db3
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.mypy_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+nosetests.xml
+coverage.xml
+*.cover
+
+# ============================================
+# C / C++
+# ============================================
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.dll
+*.so
+*.so.*
+*.dylib
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# CMake / Makefile 生成物
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+*.cmake
+!*/CMakeLists.txt
+
+# ============================================
+# IDE / 编辑器
+# ============================================
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+.history/
+
+# CLion / JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+cmake-build-*/
+
+# Eclipse
+.project
+.cproject
+.settings/
+.metadata/
+
+# Vim
+*.swp
+*.swo
+*~
+*.un~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================
+# 系统文件
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ============================================
+# 日志 / 临时文件
+# ============================================
+*.log
+*.tmp
+*.bak
+*.orig
+*.rej
+core
+core.*
+vgcore.*
+
+# ============================================
+# 依赖 / 第三方 (按需保留或忽略)
+# ============================================
+# 如果你用 git submodule 管理依赖，保留下面这行注释掉的状态
+# 如果想完全忽略某个第三方目录：
+# src/third_party/
+# src/external/
+
+# ============================================
+# 编译工具缓存
+# ============================================
+.ccache/
+.cache/
+compile_commands.json
+
+# ============================================
+# 文档生成
+# ============================================
+docs/_build/
+site/
+doxygen_output/
+
+# ============================================
+# 环境 / 配置（敏感信息）
+# ============================================
+.env
+.env.*
+!.env.example
+*.local
+*.local.yaml
