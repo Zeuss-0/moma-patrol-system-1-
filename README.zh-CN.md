@@ -1,6 +1,6 @@
 # MOMA Patrol System
 
-[中文](README.zh-CN.md) | [English](README.md)
+[中文](README.zh-CN.md) | [English](README.MD)
 
 广州机车巡检系统工作空间。
 

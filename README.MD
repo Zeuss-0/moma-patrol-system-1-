@@ -1,5 +1,7 @@
 # MOMA Patrol System
 
+[中文](README.zh-CN.md) | [English](README.MD)
+
 Workspace for Guangzhou Locomotive Patroling system.
 
 Accept only Packages as submodule.
