@@ -8,9 +8,6 @@
 [submodule "moma_nav"]
 	path = moma_nav
 	url = https://github.com/Johnson3176/moma_nav.git
-[submodule "dobot_v4_bringup"]
-	path = dobot_v4_bringup
-	url = https://github.com/Zeuss-0/dobot_v4_bringup.git
 [submodule "3rd/dobot_v4_bringup"]
 	path = 3rd/dobot_v4_bringup
 	url = https://github.com/Zeuss-0/dobot_v4_bringup.git
@@ -32,3 +29,11 @@
 [submodule "3rd/yikun_msgs"]
 	path = 3rd/yikun_msgs
 	url = https://github.com/Zeuss-0/yikun_msgs.git
+[submodule "teleop_joy_ctrl"]
+	path = teleop_joy_ctrl
+	url = https://github.com/Zeuss-0/teleop_joy_ctrl.git
+	branch = main
+[submodule "hybrid_video_recorder"]
+	path = hybrid_video_recorder
+	url = https://github.com/Zeuss-0/hybrid_video_recorder.git
+	branch = main

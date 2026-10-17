@@ -4,15 +4,36 @@
 
 广州机车巡检系统工作空间。
 
+本仓库 [Zeuss-0/moma-patrol-system-1-](https://github.com/Zeuss-0/moma-patrol-system-1-) 是 Zeuss-0 对 [yangzhaofeng496/moma-patrol-system](https://github.com/yangzhaofeng496/moma-patrol-system) 的工作副本。名称里的 `-1-` 是 GitHub 创建 fork 时留下的后缀，此处保持不变，不重命名仓库。
+
 本仓库只将各功能包作为 Git submodule 纳入管理。
 
-所有使用但**不会修改**的第三方软件包（例如硬件驱动）应放置在 `3rd/` 目录下。
+所有使用但**不会修改**的第三方软件包（例如硬件驱动）应放置在 `3rd/` 目录下。若 Zeuss-0 已有公开远程仓库，则使用该远程。`dobot_v4_bringup` 只登记在 `3rd/dobot_v4_bringup`。
 
 建议将本仓库放置在 ROS 工作空间的 `src/` 目录中：
 
 ```bash
-git clone --recurse-submodules git@github.com:yangzhaofeng496/moma-patrol-system.git <your_workspace_dir>/src
+git clone --recurse-submodules https://github.com/Zeuss-0/moma-patrol-system-1-.git <your_workspace_dir>/src
 ```
+
+## Submodule 来源
+
+| 路径 | 来源 |
+| --- | --- |
+| `moma_nav` | https://github.com/Johnson3176/moma_nav |
+| `teleop_joy_ctrl` | https://github.com/Zeuss-0/teleop_joy_ctrl |
+| `hybrid_video_recorder` | https://github.com/Zeuss-0/hybrid_video_recorder |
+| `3rd/battery` | https://github.com/Lucid-A/lebang_battery_driver |
+| `3rd/livox_ros_driver2` | https://github.com/Lucid-A/livox_ros_driver2（分支 `Guangtie`） |
+| `3rd/dobot_v4_bringup` | https://github.com/Zeuss-0/dobot_v4_bringup |
+| `3rd/rs_driver` | https://github.com/RoboSense-LiDAR/rs_driver |
+| `3rd/mvs_ros_pkg` | https://github.com/WilsonGuo/mvs_ros_pkg |
+| `3rd/modbus_interface` | https://github.com/Zeuss-0/modbus_interface |
+| `3rd/wj_716N_lidar` | https://github.com/Zeuss-0/wj_716N_lidar |
+| `3rd/realsense-ros` | https://github.com/realsenseai/realsense-ros |
+| `3rd/yikun_msgs` | https://github.com/Zeuss-0/yikun_msgs |
+
+上游 `master` 还登记了 `yangzhaofeng496` 下的 `moma_service`、`patrol`、`ros_http_bridge`、`demonstrate`、`detect` 和 `teleop_joy_ctrl`。这些远程仓库无法公开读取，因此不纳入本工作副本。手柄遥操作使用 Zeuss-0 的公开仓库。由于 `teleop_joy_ctrl` 将 `hybrid_video_recorder` 声明为 exec 依赖，本仓库一并加入该功能包。上游 `.gitmodules` 还在仓库根目录登记了第二份 `dobot_v4_bringup`，这里只保留 `3rd/dobot_v4_bringup`。
 
 > [!TIP]
 > 如果克隆时没有使用 `--recurse-submodules`，可以执行：
@@ -96,3 +117,9 @@ git commit -m "chore: remove <repo> submodule"
 ### 传感器驱动
 
 - [Livox MID360 驱动](https://github.com/Lucid-A/livox_ros_driver2/blob/Guangtie/README.md)
+
+### 工作空间功能包
+
+- [手柄遥操作](https://github.com/Zeuss-0/teleop_joy_ctrl/blob/main/README_ZH.md)
+- [混合录像](https://github.com/Zeuss-0/hybrid_video_recorder/blob/main/README_ZH.md)
+- [越疆 Dobot V4 驱动](https://github.com/Zeuss-0/dobot_v4_bringup)（`3rd/dobot_v4_bringup`）
