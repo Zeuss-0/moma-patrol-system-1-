@@ -32,3 +32,27 @@
 [submodule "3rd/yikun_msgs"]
 	path = 3rd/yikun_msgs
 	url = https://github.com/Zeuss-0/yikun_msgs.git
+[submodule "moma_service"]
+	path = moma_service
+	url = https://github.com/yangzhaofeng496/moma_service.git
+	branch = main
+[submodule "patrol"]
+	path = patrol
+	url = https://github.com/yangzhaofeng496/patrol.git
+	branch = main
+[submodule "ros_http_bridge"]
+	path = ros_http_bridge
+	url = https://github.com/yangzhaofeng496/ros_http_bridge.git
+	branch = main
+[submodule "teleop_joy_ctrl"]
+	path = teleop_joy_ctrl
+	url = https://github.com/yangzhaofeng496/teleop_joy_ctrl.git
+	branch = main
+[submodule "demonstrate"]
+	path = demonstrate
+	url = https://github.com/yangzhaofeng496/demonstrate.git
+	branch = main
+[submodule "detect"]
+	path = detect
+	url = https://github.com/yangzhaofeng496/detect.git
+	branch = main
