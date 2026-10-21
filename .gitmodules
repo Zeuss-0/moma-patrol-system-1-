@@ -29,6 +29,7 @@
 [submodule "3rd/realsense-ros"]
 	path = 3rd/realsense-ros
 	url = https://github.com/realsenseai/realsense-ros.git
+	branch = ros1-legacy
 [submodule "3rd/yikun_msgs"]
 	path = 3rd/yikun_msgs
 	url = https://github.com/Zeuss-0/yikun_msgs.git
