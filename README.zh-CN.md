@@ -11,11 +11,42 @@
 建议将本仓库放置在 ROS 工作空间的 `src/` 目录中：
 
 ```bash
-git clone --recurse-submodules https://github.com/yangzhaofeng496/moma-patrol-system.git
+# 克隆主仓库，并同时初始化所有 Git 子模块
+git clone --recurse-submodules \
+  https://github.com/yangzhaofeng496/moma-patrol-system.git
+
+# 进入 ROS 工作空间源码目录
 cd moma-patrol-system
+
+# 加载 ROS 1 Noetic 环境
+source /opt/ros/noetic/setup.bash
+
+# 更新 rosdep 依赖索引
 rosdep update
-rosdep install
-catkin_make -j$(nproc) -l$(nproc) -DROS_EDITION=ROS1
+
+# 安装工作区依赖
+rosdep install \
+  --from-paths src \
+  --ignore-src \
+  --rosdistro noetic \
+  -r -y
+
+# 使用全部 CPU 并行编译，并指定 ROS 1
+catkin_make \
+  -j$(nproc) \
+  -l$(nproc) \
+  --cmake-args -DROS_EDITION=ROS1
+
+# 加载当前工作空间环境
+source devel/setup.bash
+
+# 安装 Git LFS
+sudo apt install -y git-lfs
+git lfs install
+
+# 进入 detect 包并下载大模型文件
+cd src/moma-patrol-system/detect
+git lfs pull
 ```
 
 > [!TIP]
