@@ -4,36 +4,12 @@
 
 Workspace for Guangzhou Locomotive Patroling system.
 
-This repository, [Zeuss-0/moma-patrol-system-1-](https://github.com/Zeuss-0/moma-patrol-system-1-), is Zeuss-0's working copy of [yangzhaofeng496/moma-patrol-system](https://github.com/yangzhaofeng496/moma-patrol-system). The `-1-` suffix is the existing GitHub fork name. It stays as-is; this repository is not renamed.
-
 Accept only Packages as submodule.
 
-All used and **NEVER modified** 3rd-party packages, such as hardware drivers, should be placed under `3rd/`. Where Zeuss-0 has a public remote, that remote is used. `dobot_v4_bringup` is registered only at `3rd/dobot_v4_bringup`.
+All used and **NEVER modified** 3rd-party packages, such as hardware drivers, should be placed under `3rd/`
 
 It is recommened to be used as `src/` under ROS workspace, i.e:
-
-```bash
-git clone --recurse-submodules https://github.com/Zeuss-0/moma-patrol-system-1-.git <your_workspace_dir>/src
-```
-
-## Submodule sources
-
-| Path | Source |
-| --- | --- |
-| `moma_nav` | https://github.com/Johnson3176/moma_nav |
-| `teleop_joy_ctrl` | https://github.com/Zeuss-0/teleop_joy_ctrl |
-| `hybrid_video_recorder` | https://github.com/Zeuss-0/hybrid_video_recorder |
-| `3rd/battery` | https://github.com/Lucid-A/lebang_battery_driver |
-| `3rd/livox_ros_driver2` | https://github.com/Lucid-A/livox_ros_driver2 (`Guangtie`) |
-| `3rd/dobot_v4_bringup` | https://github.com/Zeuss-0/dobot_v4_bringup |
-| `3rd/rs_driver` | https://github.com/RoboSense-LiDAR/rs_driver |
-| `3rd/mvs_ros_pkg` | https://github.com/WilsonGuo/mvs_ros_pkg |
-| `3rd/modbus_interface` | https://github.com/Zeuss-0/modbus_interface |
-| `3rd/wj_716N_lidar` | https://github.com/Zeuss-0/wj_716N_lidar |
-| `3rd/realsense-ros` | https://github.com/realsenseai/realsense-ros |
-| `3rd/yikun_msgs` | https://github.com/Zeuss-0/yikun_msgs |
-
-Upstream `master` also lists `moma_service`, `patrol`, `ros_http_bridge`, `demonstrate`, `detect`, and `teleop_joy_ctrl` under `yangzhaofeng496`. Those remotes are not publicly readable, so they are not part of this working copy. Joystick teleop comes from the public Zeuss-0 repository. `hybrid_video_recorder` is included because `teleop_joy_ctrl` declares it as an exec dependency. Upstream `.gitmodules` also lists a second `dobot_v4_bringup` path at the repository root; only `3rd/dobot_v4_bringup` is kept.
+```git clone --recurse-submodules git@github.com:yangzhaofeng496/moma-patrol-system.git <your_workspace_dir>/src```
 
 > [!TIP]
 > If already cloned without `--recurse-submodules`, use:
@@ -108,7 +84,3 @@ git commit -m "chore: remove <repo> submodule"
   - [Battery Info Publisher](https://github.com/Lucid-A/lebang_battery_driver/blob/6e3a86be3d8b97b30107e738b974ca5d68297a82/readme.md)
 + Sensor Drivers
   - [Livox MID360 Driver](https://github.com/Lucid-A/livox_ros_driver2/blob/Guangtie/README.md)
-+ Workspace packages
-  - [Joystick teleop](https://github.com/Zeuss-0/teleop_joy_ctrl/blob/main/README.md)
-  - [Hybrid video recorder](https://github.com/Zeuss-0/hybrid_video_recorder/blob/main/README.md)
-  - [Dobot V4 bringup](https://github.com/Zeuss-0/dobot_v4_bringup) (`3rd/dobot_v4_bringup`)
