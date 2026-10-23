@@ -11,7 +11,11 @@
 建议将本仓库放置在 ROS 工作空间的 `src/` 目录中：
 
 ```bash
-git clone --recurse-submodules git@github.com:yangzhaofeng496/moma-patrol-system.git <your_workspace_dir>/src
+git clone --recurse-submodules https://github.com/yangzhaofeng496/moma-patrol-system.git
+cd moma-patrol-system
+rosdep update
+rosdep install
+catkin_make -j$(nproc) -l$(nproc) -DROS_EDITION=ROS1
 ```
 
 > [!TIP]

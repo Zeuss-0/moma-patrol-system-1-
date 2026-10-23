@@ -2,41 +2,49 @@
 
 [中文](README.zh-CN.md) | [English](README.MD)
 
-Workspace for Guangzhou Locomotive Patroling system.
+Workspace for the Guangzhou Locomotive Patrol System.
 
-Accept only Packages as submodule.
+This repository manages each functional package as a Git submodule.
 
-All used and **NEVER modified** 3rd-party packages, such as hardware drivers, should be placed under `3rd/`
+All third-party packages that are used but **not modified**, such as hardware drivers, should be placed in the `3rd/` directory.
 
-It is recommened to be used as `src/` under ROS workspace, i.e:
-```git clone --recurse-submodules git@github.com:yangzhaofeng496/moma-patrol-system.git <your_workspace_dir>/src```
+It is recommended to place this repository in the `src/` directory of a ROS workspace:
+
+```bash
+git clone --recurse-submodules https://github.com/yangzhaofeng496/moma-patrol-system.git
+cd moma-patrol-system
+rosdep update
+rosdep install
+catkin_make -j$(nproc) -l$(nproc) -DROS_EDITION=ROS1
+```
 
 > [!TIP]
-> If already cloned without `--recurse-submodules`, use:
+> If the repository was cloned without `--recurse-submodules`, run:
 > ```
 > git pull
 > git submodule update --init --recursive
 > ```
-> or
+> Or:
 > ```
 > git pull --recurse-submodules
 > ```
 
-## Git Command Usages
+## Git Commands
 
-The following command is, by default, executed from the root directory of the current local repository.
+The following commands assume that they are run from the root directory of the current local repository.
 
-Take `battery` as example, the repo URL is `https://github.com/Lucid-A/lebang_battery_driver.git`.
-
-> [!IMPORTANT]
-> Please follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) when writing commit messages.
-> If needed, you can use an LLM to help rewrite your commit message into the required format.
+Using `battery` as an example, its repository URL is:
+`https://github.com/Lucid-A/lebang_battery_driver.git`.
 
 > [!IMPORTANT]
-> After commit, use `git push` to push your commit to the remote repository.
-> Best pratice is, `pull` before `push`, resolve the conflict in your local workspace.
+> Follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) when writing commit messages.
+> If necessary, you can use an LLM to rewrite commit messages in the required format.
 
-### ADD Submodule
+> [!IMPORTANT]
+> After committing, use `git push` to push the commit to the remote repository.
+> It is recommended to run `pull` before pushing and promptly resolve any conflicts that may occur.
+
+### Add a Submodule
 
 ```bash
 git submodule add https://github.com/Lucid-A/lebang_battery_driver.git battery
@@ -44,9 +52,9 @@ git add battery .gitmodules
 git commit -m "chore(battery): add battery driver submodule"
 ```
 > [!TIP]
->Although the remote repo name is `lebang_battery_driver`, you can give it a new name `battery` in this workspace.
+> Although the remote repository is named `lebang_battery_driver`, it can be named `battery` in this workspace.
 
-### MOVE Submodule
+### Move a Submodule
 
 ```bash
 git mv battery 3rd/battery
@@ -54,7 +62,7 @@ git add 3rd/battery .gitmodules
 git commit -m "chore(battery): move battery to 3rd/battery"
 ```
 
-### UPDATE Submodule to a specificated Version
+### Update a Submodule to a Specific Version
 
 ```bash
 git -C 3rd/battery fetch
@@ -64,23 +72,26 @@ git commit -m "chore(battery): update battery to <short-hash>"
 ```
 
 > [!NOTE]
-> No need to `git add .gitmodules` here.
+> There is no need to run `git add .gitmodules` again at this point.
 
 >  [!TIP]
-> Use `git submodule update --remote` to update to the newest version of the submodule.
+> You can use `git submodule update --remote` to update to the latest version of the remote repository.
 
-### REMOVE Submodule
+### Remove a Submodule
 
 ```bash
-git submodule deinit -f 3rd/battery # Remove registration and files in local ws
-git rm -f 3rd/battery               # Remove reference in parent repo
-rm -rf .git/modules/3rd/battery     # Remove local cache for deleted submodule
+git submodule deinit -f 3rd/battery # Remove the registration and files from the local workspace
+git rm -f 3rd/battery               # Remove the submodule reference from the parent repository
+rm -rf .git/modules/3rd/battery     # Remove the local cache of the deleted submodule
 git commit -m "chore: remove <repo> submodule"
 ```
 
-## README for Packages
+## READMEs for Functional Packages
 
-+ Provided by Robot Manufacture
-  - [Battery Info Publisher](https://github.com/Lucid-A/lebang_battery_driver/blob/6e3a86be3d8b97b30107e738b974ca5d68297a82/readme.md)
-+ Sensor Drivers
-  - [Livox MID360 Driver](https://github.com/Lucid-A/livox_ros_driver2/blob/Guangtie/README.md)
+### Provided by the Robot Manufacturer
+
+- [Battery information publisher node](https://github.com/Lucid-A/lebang_battery_driver/blob/6e3a86be3d8b97b30107e738b974ca5d68297a82/readme.md)
+
+### Sensor Drivers
+
+- [Livox MID360 driver](https://github.com/Lucid-A/livox_ros_driver2/blob/Guangtie/README.md)
