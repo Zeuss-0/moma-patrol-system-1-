@@ -40,7 +40,7 @@
 [submodule "patrol"]
 	path = patrol
 	url = https://github.com/yangzhaofeng496/patrol.git
-	branch = main
+	branch = master
 [submodule "ros_http_bridge"]
 	path = ros_http_bridge
 	url = https://github.com/yangzhaofeng496/ros_http_bridge.git
