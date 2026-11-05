@@ -13,7 +13,7 @@
 	url = https://github.com/Zeuss-0/dobot_v4_bringup.git
 [submodule "3rd/rs_driver"]
 	path = 3rd/rs_driver
-	url = https://github.com/RoboSense-LiDAR/rs_driver.git
+	url = https://github.com/Zeuss-0/rs_driver.git
 [submodule "3rd/mvs_ros_pkg"]
 	path = 3rd/mvs_ros_pkg
 	url = https://github.com/yangzhaofeng496/mvs_ros_pkg.git
@@ -25,7 +25,7 @@
 	url = https://github.com/Zeuss-0/wj_716N_lidar.git
 [submodule "3rd/realsense-ros"]
 	path = 3rd/realsense-ros
-	url = https://github.com/realsenseai/realsense-ros.git
+	url = https://github.com/Zeuss-0/realsense-ros.git
 	branch = ros1-legacy
 [submodule "3rd/yikun_msgs"]
 	path = 3rd/yikun_msgs
